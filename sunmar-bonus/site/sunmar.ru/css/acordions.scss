@@ -1,0 +1,48 @@
+@import "../../../node_modules/accordion-js/dist/accordion.css";
+@import "../../common/css/sunmar/sunmar-fluid-mixins";
+
+section.accordions > article .contenu {
+	.ac {
+		border-radius: 12px;
+		@include property(padding, 32px);
+
+		.ac-trigger:after {
+			display: none;
+		}
+
+		.ac-trigger:focus {
+			color: unset;
+		}
+
+		.ac-header {
+			display: flex;
+		}
+
+		.ac-trigger-icon {
+			transform: rotate(180deg);
+			transition: transform 300ms ease;
+			transform-origin: 50%;
+		}
+
+		.ac-panel {
+			ul {
+				@include property(padding-left, 32px);
+				display: flex;
+				flex-direction: column;
+				@include property(gap, 20px);
+				@include property(margin-block, 20px);
+
+				li {
+					@include font(14px);
+					line-height: 1.5;
+				}
+			}
+		}
+	}
+
+	.ac.js-enabled.is-active {
+		.ac-trigger-icon {
+			transform: rotate(0);
+		}
+	}
+}
