@@ -1,0 +1,46 @@
+@import '../../common/css/sunmar/sunmar-fluid-mixins';
+section.info-links > article .contenu {
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		@include property(gap, 24px);
+		list-style: none;
+
+		li {
+			width: calc(50% - (1.5em / 2));
+			background: var(--white, #fff);
+
+			@media (max-width: 768px) {
+				width: 100%;
+			}
+
+			a {
+				text-decoration: none;
+				border-radius: var(--radius-borderRadiusMD, 12px);
+				border: 1px solid var(--Stroke, #e6e6e6);
+				color: #000;
+				@include fontAndProperty(16px, padding-block, 24px);
+				@include fontAndProperty(16px, padding-inline, 32px);
+				position: relative;
+				display: block;
+				line-height: 1.5;
+				cursor: pointer;
+
+				&::after {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 50%;
+					@include property(right, 24px);
+					transform: translateY(-50%);
+					@include property(width, 24px);
+					aspect-ratio: 1/1;
+					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.46967 18.5303C8.17678 18.2374 8.17678 17.7626 8.46967 17.4697L13.9393 12L8.46967 6.53033C8.17678 6.23744 8.17678 5.76256 8.46967 5.46967C8.76256 5.17678 9.23744 5.17678 9.53033 5.46967L15.5303 11.4697C15.8232 11.7626 15.8232 12.2374 15.5303 12.5303L9.53033 18.5303C9.23744 18.8232 8.76256 18.8232 8.46967 18.5303Z' fill='black' fill-opacity='0.88'/%3E%3C/svg%3E");
+					background-repeat: no-repeat;
+					background-size: contain;
+					background-position: center;
+				}
+			}
+		}
+	}
+}

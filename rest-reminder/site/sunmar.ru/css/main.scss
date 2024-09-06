@@ -5,16 +5,21 @@ section.kv > article .contenu {
 	.kv-main-banner {
 		position: relative;
 		width: 100%;
-		aspect-ratio: 137/32;
+		aspect-ratio: 137/43;
 		border-radius: 32px;
 		overflow: hidden;
+		background: url(/site/sunmar.ru/assets/kv-icon.png), #dfdfe8;
+		background-repeat: no-repeat;
+		background-position: 90% -160%;
 
 		@media (max-width: 768px) {
-			aspect-ratio: 343/400;
+			aspect-ratio: 343/388;
+			background-position: 50% 85%;
+			background-size: 70%;
 		}
 
 		.content {
-			--content-font-color: #ffffff;
+			--content-font-color: #0e2855;
 
 			position: absolute;
 			max-width: $max-content-width;
@@ -43,8 +48,9 @@ section.kv > article .contenu {
 				flex-direction: column;
 				justify-content: center;
 				align-items: start;
-				gap: 1.6em;
+				gap: 0.5em;
 				height: 100%;
+
 				@media (max-width: 768px) {
 					align-items: center;
 					justify-content: start;
@@ -52,7 +58,7 @@ section.kv > article .contenu {
 				}
 			}
 
-			h2,
+			h1,
 			p {
 				color: var(--content-font-color);
 				@media (max-width: 768px) {
@@ -60,10 +66,15 @@ section.kv > article .contenu {
 				}
 			}
 
-			h2 {
+			h1 {
+				font-size: 3.5em !important;
+				width: 60%;
+				line-height: 1 !important;
+				text-align: left;
 				@media (max-width: 768px) {
 					margin-top: 0;
-					@include font(40px);
+					font-size: 2.5em !important;
+					text-align: center;
 				}
 			}
 
@@ -72,10 +83,7 @@ section.kv > article .contenu {
 			}
 
 			p.slogan {
-				font-size: 1.2em;
-				@media (max-width: 768px) {
-					@include font(16px);
-				}
+				font-size: 1em;
 			}
 
 			p.erid {

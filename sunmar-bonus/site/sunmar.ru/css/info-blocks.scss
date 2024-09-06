@@ -1,4 +1,4 @@
-@import "../../common/css/sunmar/sunmar-fluid-mixins";
+@import '../../common/css/sunmar/sunmar-fluid-mixins';
 
 section.info-blocks > article .contenu {
 	@include property(gap, 32px);
@@ -33,12 +33,16 @@ section.info-blocks > article .contenu {
 
 		.important {
 			display: flex;
-			align-items: center;
+			align-items: start;
 			@include property(padding, 16px);
 			gap: 8px;
 			width: fit-content;
 			border-radius: var(--radius-borderRadiusMD, 12px);
 			background: var(--Light-red, #feeee7);
+
+			svg {
+				flex-shrink: 0;
+			}
 
 			strong {
 				@include font(14px);
@@ -49,5 +53,11 @@ section.info-blocks > article .contenu {
 				@include font(12px);
 			}
 		}
+	}
+
+	.actions {
+		display: flex;
+		width: 100%;
+		justify-content: center;
 	}
 }
