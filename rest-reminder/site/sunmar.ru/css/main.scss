@@ -1,16 +1,17 @@
-@import '../../common/css/sunmar/sunmar-fluid-mixins';
-@import '../../common/css/global-variables';
+@import "../../common/css/sunmar/sunmar-fluid-mixins";
+@import "../../common/css/global-variables";
 
 section.kv > article .contenu {
 	.kv-main-banner {
 		position: relative;
 		width: 100%;
-		aspect-ratio: 137/43;
-		border-radius: 32px;
+		aspect-ratio: 137/50;
+		border-radius: 12px;
 		overflow: hidden;
 		background: url(/site/sunmar.ru/assets/kv-icon.png), #dfdfe8;
 		background-repeat: no-repeat;
-		background-position: 90% -160%;
+		background-size: 35%;
+		background-position: 80% 160%;
 
 		@media (max-width: 768px) {
 			aspect-ratio: 343/388;
@@ -67,13 +68,13 @@ section.kv > article .contenu {
 			}
 
 			h1 {
-				font-size: 3.5em !important;
+				@include font(48px);
 				width: 60%;
 				line-height: 1 !important;
 				text-align: left;
 				@media (max-width: 768px) {
 					margin-top: 0;
-					font-size: 2.5em !important;
+					@include font(40px);
 					text-align: center;
 				}
 			}

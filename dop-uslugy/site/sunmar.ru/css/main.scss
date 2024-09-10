@@ -1,11 +1,11 @@
-@import '../../common/css/sunmar/sunmar-fluid-mixins';
-@import '../../common/css/global-variables';
+@import "../../common/css/sunmar/sunmar-fluid-mixins";
+@import "../../common/css/global-variables";
 
 section.kv > article .contenu {
 	.kv-main-banner {
 		position: relative;
 		width: 100%;
-		aspect-ratio: 137/43;
+		aspect-ratio: 137/50;
 		border-radius: 32px;
 		overflow: hidden;
 		background: url(/site/sunmar.ru/assets/earht.webp), #dfdfe8;
